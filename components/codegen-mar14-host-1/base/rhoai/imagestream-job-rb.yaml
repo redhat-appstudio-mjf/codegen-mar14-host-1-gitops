@@ -1,0 +1,13 @@
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: codegen-mar14-host-1-imagestream-job-rolebinding
+  namespace: redhat-ods-applications
+subjects:
+  - kind: ServiceAccount
+    name: codegen-mar14-host-1-dsp-job
+    namespace: codegen-mar14-1
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: codegen-mar14-host-1-imagestream-job-role
